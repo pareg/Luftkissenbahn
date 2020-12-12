@@ -1,0 +1,10 @@
+body {
+  background-color: #666;
+}
+#canvas {
+  background-color: #fff;
+}
+tab:before
+  {
+    content: "\00a0";
+  }
