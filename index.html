@@ -3,13 +3,14 @@
 <head>
 <meta charset="utf-8">
 <title>Luftkissenbahn</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="./style.css">
 </head>
 <body>
 <canvas id="canvas" width="800" height="500"></canvas>
-<script src= "ball.js"></script>
-<script src= "box.js"></script>
-<script src= "luftkissenbahn010.js"></script>
+<script src= "./ball.js"></script>
+<script src= "./box.js"></script>
+<script src= "./luftkissenbahn019.js"></script>
+
 </body>
 <div class="slidecontainer">
   <br>
@@ -20,17 +21,26 @@
   <br>
   <input type="range" min="0.5" max="12" step="0.5" value="1" class="slider" id="masse_eins">
   <tab><tab><tab><tab><tab>
-  <input type="range" min="0.5" max="12" step="0.5" value="1" class="slider" id="masse_zwei">
+  <input type="range" min="0.5" max="12" step="0.5" value="2" class="slider" id="masse_zwei">
   <br>
   <br>
-  <input type="checkbox" id="myCheck"> Inelastischer Stoss 
+  v<sub>1</sub> = <span id="v1"></span>
+  <tab><tab><tab><tab><tab><tab><tab><tab><tab><tab><tab><tab><tab><tab><tab><tab><tab><tab><tab><tab><tab>
+  v<sub>2</sub> = <span id="v2"></span>
+  <br>
+  <input type="range" min="-5" max="5" step="0.5" value="2" class="slider" id="geschwindigkeit_eins">
+  <tab><tab><tab><tab><tab>
+  <input type="range" min="-5" max="5" step="0.5" value="0" class="slider" id="geschwindigkeit_zwei">
+  <br>
+  <br>  
+  <input type="checkbox" id="inelastisch"> Inelastischer Stoss 
   <tab><tab>
   <input type="checkbox" id="geschwindigkeitsvektor"> Geschwindigkeitsvektoren anzeigen 
   <tab><tab>
-  <input type="checkbox" id="massen"> Massen anzeigen 
+  <input type="checkbox" id="massen"> Messwerte anzeigen 
   <br>
   <br>
-  <input type="checkbox" id="geschwindigkeitAnzeigen"> Geschwindigkeiten anzeigen
+  <input type="checkbox" id="geschwindigkeitAnzeigen"> s-t-Diagramm
   <br>
   <br>
   <button type="button" id="start">Start</button> 
