@@ -1,14 +1,7 @@
 // Farbpalette nach Dan Shiffman
 
 /*
-#f05025 (240, 80, 37) 	
-#f89e50 (248, 158, 80) 	
-#f8ef22 (248, 239, 34) 	
-#31c5f4 (49, 197, 244) 	
-#f063a4 (240, 99, 164) 	
-#9252a1 (146, 82, 161) 	
-#817ac6 (129, 122, 198) 	
-#62c777 (98, 199, 119) 
+
 */
 
 let canvas = document.getElementById('canvas');
@@ -25,12 +18,7 @@ let positionMasse2 = [];
 let puffer = 40; //Abstände der Puffer von den Rändern
 
 
-/*
-Farben:
-#354B61
 
-
-*/
 
 function masseeinseinstellen() {
 	 m1 = parseFloat(document.getElementById("masse_eins").value);
@@ -297,12 +285,10 @@ function onEachStep() {
     
   context.save();  
   context.clearRect(0, 0, canvas.width, canvas.height); 
-  context.fillStyle = "#f8ef22"; 
+  context.fillStyle = "#D9CDBD"; 
   context.fillRect(0, 0, canvas.width, canvas.height);
-  context.fillStyle = "#f89e50";
+  context.fillStyle = "#59544E";
   context.fillRect(0, canvas.height * 2 / 3 - 5, canvas.width, canvas.height * 2 / 30);
-  
-  
   wagen1.draw(context); 
   wagen2.draw(context); 
   context.restore();
@@ -344,7 +330,7 @@ function onEachStep() {
   context.restore();
   
   context.save();  
-  context.fillStyle = " #31c5f4";
+  context.fillStyle = "#59544E";
   context.fillRect(puffer/2, canvas.height * 2 / 3 - 30, puffer/2, canvas.height * 2 / 30);
   context.fillRect(canvas.width - puffer, canvas.height * 2 / 3 - 30, puffer/2, canvas.height * 2 / 30);
   context.restore();
@@ -384,32 +370,32 @@ function init() {
   wagen1 = new Box(20,"#f063a4");
   wagen1.x = puffer; wagen1.y = 250.5;
   wagen1.vx = v1; 
-  wagen1.width = 50;
-  wagen1.height = 20;
+  wagen1.width = Math.pow(m1, 1 / 3) * 50;
+  wagen1.height = Math.pow(m1, 1 / 3) * 20;
   wagen1.color = "#f063a4";
   wagen1.y = canvas.height * 2 / 3 - wagen1.height;
   
   wagen2 = new Box(20,"#9252a1");
   wagen2.x = 400; wagen2.y = 250.5;
   wagen2.vx = v2;
-  wagen2.width = 50;
-  wagen2.height = 20
+  wagen2.width = Math.pow(m2, 1 / 3) * 50;
+  wagen2.height = Math.pow(m2, 1 / 3) * 20;
   wagen2.color = "#9252a1";
   wagen2.y = canvas.height * 2 / 3 - wagen2.height;  
   context.restore();  
     
   
   context.clearRect(0, 0, canvas.width, canvas.height); 
-  context.fillStyle = "#f8ef22"; 
+  context.fillStyle = "#D9CDBD"; 
   context.fillRect(0, 0, canvas.width, canvas.height);
-  context.fillStyle = "#f89e50";
+  context.fillStyle = "#59544E";
   context.fillRect(0, canvas.height * 2 / 3 - 5, canvas.width, canvas.height * 2 / 30);
   wagen1.draw(context); 
   wagen2.draw(context); 
   
   
   context.save();  
-  context.fillStyle = " #31c5f4";
+  context.fillStyle = "#59544E";
   context.fillRect(puffer/2, canvas.height * 2 / 3 - 30, puffer/2, canvas.height * 2 / 30);
   context.fillRect(canvas.width - puffer, canvas.height * 2 / 3 - 30, puffer/2, canvas.height * 2 / 30);
   context.restore();
